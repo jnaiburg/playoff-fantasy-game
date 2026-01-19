@@ -1,8 +1,7 @@
-
 export const GameHome = () => {
-  return (
-    <>
-      <h1>Game Home</h1>
-    </>
-  );
+	return (
+		<>
+			<h1>Game Home</h1>
+		</>
+	);
 };

@@ -1,5 +1,5 @@
-import { GameHome } from './GameHome';
+import { GameHome } from "./GameHome";
 
 export default function GameHomePage() {
-  return <GameHome />;
+	return <GameHome />;
 }
