@@ -1,7 +1,7 @@
 "use client";
 
+import { Button, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
-import Button from "react-bootstrap/Button";
 
 export default function Home() {
 	const router = useRouter();
@@ -11,8 +11,8 @@ export default function Home() {
 	};
 	return (
 		<>
-			<h1>Playoff Fantasy Game</h1>
-			<Button variant="primary" onClick={handleNavigateToGame}>
+			<Typography variant="h1">Playoff Fantasy Game</Typography>
+			<Button variant="contained" onClick={handleNavigateToGame}>
 				Click to navigate to game home
 			</Button>
 		</>
