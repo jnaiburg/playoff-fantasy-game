@@ -1,6 +1,6 @@
 export type Team = {
 	id: string;
-	leagueid: string;
+	leagueId: string;
 	userId: string;
 	name: string;
 };
