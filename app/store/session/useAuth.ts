@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { getUserById } from "@/app/services/userService";
 
-import { selectIsLoggedIn } from "./sessionSelectors";
+import { selectCurrentUser, selectIsLoggedIn } from "./sessionSelectors";
 import { login, logout } from "./sessionSlice";
 
 export function useAuth() {
@@ -23,9 +23,12 @@ export function useAuth() {
     dispatch(logout());
   }, [dispatch]);
 
+  const currentUser = useSelector(selectCurrentUser);
+
   return {
     isLoggedIn,
     login: loginUser,
     logout: logoutUser,
+    currentUser,
   };
 }

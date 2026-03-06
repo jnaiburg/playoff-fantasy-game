@@ -1,27 +1,13 @@
 "use client";
 
-import {
-	Box,
-	Button,
-	Card,
-	CardActionArea,
-	CardContent,
-	Container,
-	Stack,
-	Typography,
-} from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 
+import { LeaderboardWidget } from "../../components/LeaderboardWidget/LeaderboardWidget";
 import { useGameHomeViewModel } from "./GameHome.viewModel";
 
 export const GameHome = () => {
-	const {
-		isLoggedIn,
-		handleLeaderboardClick,
-		handleProfileClick,
-		handleMyTeamClick,
-		handleLoginClick,
-		handleLogoutClick,
-	} = useGameHomeViewModel();
+	const { isLoggedIn, handleProfileClick, handleMyTeamClick, handleLoginClick, handleLogoutClick } =
+		useGameHomeViewModel();
 
 	return (
 		<Container sx={sx.container}>
@@ -30,16 +16,7 @@ export const GameHome = () => {
 			</Typography>
 
 			<Box sx={sx.box}>
-				<Card sx={sx.previewCard}>
-					<CardActionArea onClick={handleLeaderboardClick}>
-						<CardContent>
-							<Typography variant="h6">Leaderboard Preview</Typography>
-							<Typography variant="body2" color="text.secondary">
-								Click to view the full leaderboard
-							</Typography>
-						</CardContent>
-					</CardActionArea>
-				</Card>
+				<LeaderboardWidget href="/leaderboard"/>
 			</Box>
 
 			<Stack direction="row" spacing={2} justifyContent="center">
@@ -71,5 +48,5 @@ const sx = {
 	container: { p: 2, maxWidth: 900, mx: "auto", textAlign: "center" },
 	header: { mb: 2 },
 	previewCard: { width: 420 },
-  box: { display: "flex", justifyContent: "center", mb: 3 },
+	box: { display: "flex", justifyContent: "center", mb: 3 },
 } as const;
