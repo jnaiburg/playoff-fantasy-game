@@ -14,6 +14,11 @@ pnpm dev
 bun dev
 ```
 
+## Prisma
+To use Prisma, run `npx prisma generate`
+
+To seed the database, run `npx prisma db seed`
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
